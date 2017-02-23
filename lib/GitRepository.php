@@ -1,9 +1,9 @@
 <?php
 
 class GitRepository extends Repository {
-    protected $url;
-    protected $branch = null;
-    protected $commit = null;
+    public $url;
+    public $branch = null;
+    public $commit = null;
 
     function getUrl() {
         return $this->url;

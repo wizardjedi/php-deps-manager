@@ -9,8 +9,6 @@ class FileUtils {
             $name = uniqid();
 
             $path = $tmp . DIRECTORY_SEPARATOR . $name;
-
-            echo "Check path ${path}\n";
         } while (file_exists($path));
 
         mkdir($path);

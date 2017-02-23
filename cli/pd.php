@@ -2,36 +2,21 @@
 
 include(dirname(__FILE__).'/../lib/autoload.php');
 
-class pd {
-    public static function create() {
-        return new self();
-    }
+$pd = PD::create();
 
-    public function __construct() {
+$arguments = $_SERVER['argv'];
 
-    }
+if (sizeof($arguments) == 1 || $arguments[1] == '--help') {
+    $pd->usage();
+} else {
+    $command = strtolower($arguments[1]);
 
-    public function run() {
-        $name = $_SERVER['argv'][1];
-
-        echo "Using file: ".$name."\n";
-
-        $data = file_get_contents($name);
-
-        var_dump($data);
-
-        $obj = json_decode($data, true);
-
-        var_dump($obj);
-
-        $package = PackageParser::parse($obj);
-
-        var_dump($package);
-
-        echo "-----\n";
-
-        $package->getRepository()->checkout();
+    switch ($command) {
+        case 'update':
+            $pd->update($arguments);
+            break;
+        default:
+            throw new Exception("Unknown command '${command}'");
     }
 }
 
-pd::create()->run();

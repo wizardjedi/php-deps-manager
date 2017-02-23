@@ -1,14 +1,14 @@
 <?php
 
 class Package {
-    protected $name;
-    protected $namespace;
-    protected $version;
-    protected $description;
+    public $name;
+    public $namespace;
+    public $version;
+    public $description;
 
-    protected $deps;
+    public $deps;
 
-    protected $repository;
+    public $repository;
 
     function getRepository() {
         return $this->repository;

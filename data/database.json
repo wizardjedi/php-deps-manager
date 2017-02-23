@@ -1,0 +1,56 @@
+{
+    "projects": [
+        {
+            "name": "com.example/library1",
+            "description": "Main project",
+            "versions": [
+                {
+                    "version":"0.0.1",
+                    "repo":{
+                        "url":"",
+                        "branch":"",
+                        "commit":""
+                    }
+                },
+                {
+                    "version":"0.0.2",
+                    "repo":{
+                        "url":"",
+                        "branch":"",
+                        "commit":""
+                    }
+                },
+                {
+                    "version":"0.0.3",
+                    "deps":{
+                        "com.example/library2":"*",
+                        "com.example/library3":"*"
+                    },
+                    "repo":{
+                        "url":"",
+                        "branch":"",
+                        "commit":""
+                    }
+                }
+            ]
+        },
+        {
+            "name": "com.example/library2",
+            "description": "Standalone library",
+            "versions": [
+            ]
+        },
+        {
+            "name": "com.example/library3",
+            "description": "Some library with nested deps",
+            "versions": [
+            ]
+        },
+        {
+            "name": "com.example/library4",
+            "description": "Transient library",
+            "versions": [
+            ]
+        }
+    ]
+}
