@@ -1,0 +1,13 @@
+{
+  "name":"com.example/library1",
+  "version":"1.0.0",
+  "description":"Some library",
+  "deps":{
+    "com.example/library2" : "*",
+    "com.example/library3" : "=1.2.1"
+  },
+  "classMap":["src/","lib/"],
+  "repository":{
+    "git":"https://github.com/wizardjedi/php-zabbix-agent.git:branch-master"
+  }
+}
